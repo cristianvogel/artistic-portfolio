@@ -34,7 +34,7 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
         <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-6">Selected Supporting Works</p>
         <div className="space-y-8">
           {(() => {
-            const CATEGORY_ORDER = ['Audio Visual', 'Practice Based Research', 'Realtime', 'Composition', 'Interdisciplinary', 'Selected Composition for Dance'];
+            const CATEGORY_ORDER = ['Audio Visual', 'Composition', 'Realtime', 'Practice Based Research', 'Interdisciplinary', 'Selected Composition for Dance'];
             
             // Sort projects reverse-chronologically first
             const sortedProjects = [...projects].sort((a, b) => {
@@ -88,14 +88,6 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
               className={`text-left text-base transition-colors hover:text-neutral-900 ${activeView === 'writing' ? 'font-medium text-neutral-900' : 'text-neutral-500'}`}
             >
               Writing
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => onSelectView('collaborators')}
-              className={`text-left text-base transition-colors hover:text-neutral-900 ${activeView === 'collaborators' ? 'font-medium text-neutral-900' : 'text-neutral-500'}`}
-            >
-              Collaborators
             </button>
           </li>
         </ul>
