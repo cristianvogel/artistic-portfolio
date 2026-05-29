@@ -24,9 +24,9 @@ const getYouTubeEmbedUrl = ({ id, startSeconds }) => {
   return `https://www.youtube-nocookie.com/embed/${id}?${params.toString()}`;
 };
 
-const getVimeoEmbedUrl = ({ id, hash, startSeconds }) => {
+const getVimeoEmbedUrl = ({ id, hash, startSeconds, autoplay = true }) => {
   const params = new URLSearchParams({
-    autoplay: '1',
+    autoplay: autoplay ? '1' : '0',
     badge: '0',
     byline: '0',
     dnt: '1',
@@ -105,7 +105,7 @@ export const MinimalVideoPlayer = ({ url, caption }) => (
 export const YouTubeEmbed = ({ media }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const videoId = getYouTubeId(media.url);
-  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailUrl = media.poster || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <div className="flex flex-col gap-2">

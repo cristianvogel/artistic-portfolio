@@ -50,6 +50,7 @@ export const PROJECTS = [
     media: {
       type: "youtube",
       url: "https://www.youtube.com/embed/eLegrc_mdnI",
+      poster: "https://i.ytimg.com/vi/eLegrc_mdnI/hqdefault.jpg",
       caption: "Exhibition Documentation"
     }
   },
@@ -117,6 +118,7 @@ export const PROJECTS = [
     media: {
       type: "youtube",
       url: "https://www.youtube.com/embed/-kHvY_cklBM",
+      poster: "https://i.ytimg.com/vi/-kHvY_cklBM/hqdefault.jpg",
       caption: "Official video"
     }
   },
@@ -189,7 +191,7 @@ export const PROJECTS = [
     category: "Practice Based Research",
     type: "Artistic Research / Data Sonification",
     focusTags: ["Nye Veje", "Data Sonification", "Data-Driven Music", "AI Models", "Story In Blood"],
-    description: "Nye Veje artistic research scholarship from the Danish Composers Society, awarded for a deep dive into data-driven music and data sonification. The research asked how sound can describe complex data models, how abstract data structures can generate new meanings, and how listeners might interpret those meanings as AI models increasingly shape the production of sound. One result was Story In Blood, an audiovisual work made from 600 blood tests tracking a patient overcoming leukemia, using medical data as the basis for data-driven music and video.",
+    description: "Nye Veje artistic research scholarship from the Danish Composers Society, awarded for a deep dive into data-driven music and data sonification. The research asked how sound can describe complex data models, how abstract data structures can generate new meanings, and how listeners might interpret those meanings through the production of sound. One result was Story In Blood, an audiovisual work made from 600 blood tests tracking a patient overcoming leukemia, using medical data as the basis for data-driven music and video.",
     chronology: {
       primary: "25 Jan 2023",
       year: "2023",
@@ -201,6 +203,7 @@ export const PROJECTS = [
       type: "vimeo",
       id: "1196769001",
       poster: "/other-stills/StoryInBlood.png",
+      autoplay: false,
       caption: "Story In Blood / data-driven audiovisual work from 600 blood tests"
     }
   },
@@ -232,7 +235,7 @@ export const PROJECTS = [
     category: "Selected Composition for Dance",
     type: "Dance Score with Realtime Speech Synthesis",
     focusTags: ["Text-to-Speech", "Realtime Speech Synthesis", "Dance Score", "Synthetic Voices", "Computation and Choreography"],
-    description: "Composition for Gilles Jobin's Text to speech, focused here on the use of an early form of text-to-speech as a generative scoring material. The work used realtime speech synthesis to generate aspects of the score, bringing synthetic voices, rewritten internet text, and choreographic timing into the same compositional field. The result treats machine speech not as narration alone, but as a live sonic material situated between semantic language, signal, rhythm, and staged movement.",
+    description: "Composition for Gilles Jobin's Text to speech, focused here on the use of an early form of text-to-speech as a generative scoring material. The work used realtime speech synthesis to generate aspects of the score, bringing synthetic voices, fictionalised news stories, and choreographic timing into the same compositional field. The result treats machine speech not as narration alone, but as a live sonic material situated between semantic language, signal, rhythm, and staged movement.",
     chronology: {
       primary: "06 Mar 2008",
       year: "2008",
