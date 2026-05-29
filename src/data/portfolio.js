@@ -254,7 +254,7 @@ export const PROJECTS = [
     title: "Agnete & The Merman",
     year: "2017",
     category: "Audio Visual",
-    type: "Feature Length Experimental Dance Film",
+    type: "Feature Length Music Film Documenting Immersive Music Theatre Production",
     duration: "54:12",
     focusTags: ["Feature Film", "Experimental Dance", "Immersive Sound", "High Order Ambisonics", "Surround Sound"],
     description: "A 55 minute film adaptation of Cristian Vogel's spatial sound and live theatre production, commissioned by Aarhus European Capital of Culture 2017, performed on 24 speakers and filmed by The Automatic Message during the Danish production.",
@@ -623,7 +623,7 @@ export const THESIS_TAGS_BY_PROJECT = {
   ],
     // Agnete & The Merman
   p5: [
-    "music drama",
+      "multichannel music drama",
     "restorative mythology",
     "minimal viable staging",
     "dramaturgical events",
@@ -634,7 +634,7 @@ export const THESIS_TAGS_BY_PROJECT = {
       "spatial score",
       "custom engineering",
       "local networking protocols",
-      "performance documentation"
+      "extended documentation"
   ],
     // Requiem for an Age
   p13: [
