@@ -10,7 +10,7 @@ export const ProjectMetadata = ({ project }) => {
 
   return (
     <dl
-      className="mt-8 grid grid-cols-1 gap-4 border-y border-neutral-200 py-5 md:grid-cols-3"
+      className="mt-6 grid grid-cols-1 gap-4 border-y border-neutral-200 py-5 sm:grid-cols-3 lg:mt-0 lg:grid-cols-1"
       data-meta-date={project.chronology.iso}
       data-meta-end-date={project.chronology.endIso}
       data-meta-source={project.chronology.source}

@@ -180,6 +180,34 @@ export const VimeoEmbed = ({ media }) => {
   );
 };
 
+export const BandcampEmbed = ({ media }) => {
+  const params = [
+    `track=${media.trackId}`,
+    'size=large',
+    'bgcol=ffffff',
+    'linkcol=111111',
+    'tracklist=false',
+    'artwork=small',
+    'transparent=true'
+  ].join('/');
+
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="overflow-hidden border border-neutral-300 bg-white">
+        <iframe
+          className="block h-[120px] w-full"
+          src={`https://bandcamp.com/EmbeddedPlayer/${params}/`}
+          title={media.caption || 'Bandcamp audio player'}
+          seamless
+        >
+          <a href={media.url}>{media.caption || 'Listen on Bandcamp'}</a>
+        </iframe>
+      </div>
+      {media.caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={media.caption} /></p>}
+    </div>
+  );
+};
+
 export const MultiWorkGrid = ({ works, caption }) => (
   <div className="flex flex-col gap-6">
     <div className="grid grid-cols-1 gap-4">
@@ -245,6 +273,10 @@ export const MediaRenderer = ({ media, title }) => {
 
   if (media.type === 'vimeo') {
     return <VimeoEmbed media={media} />;
+  }
+
+  if (media.type === 'bandcamp') {
+    return <BandcampEmbed media={media} />;
   }
 
   if (media.type === 'multi-work') {

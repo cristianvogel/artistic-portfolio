@@ -76,6 +76,29 @@ export const PROJECTS = [
     }
   },
   {
+    id: "p8",
+    title: "Etude (Cristian Vogel remix)",
+    year: "2017",
+    category: "Composition",
+    type: "Electroacoustic Remix",
+    duration: "05:33",
+    focusTags: ["Electroacoustic", "Remix", "Signal Feedback", "Network Delay", "Codec Filtering"],
+    description: "A remix composed from source material by Danish electronic music pioneer Else Marie Pade, commissioned for a DaCapo tribute CD. The work treats Pade's 1961 Etude as an early investigation into audio signal feedback, likely made with tape machines and filtering in the feedback path. Vogel translated that idea into a contemporary networked process: sounds from Pade's original were streamed from a Copenhagen studio computer, received on a phone after travelling through the web, then routed back into the mixer. The web's natural latency became the primary delay time, while compression codecs introduced a present-day form of subtractive filtering. The final composition includes the artefacts and timing instabilities of that process.",
+    chronology: {
+      primary: "09 Mar 2017",
+      year: "2017",
+      label: "Bandcamp release",
+      iso: "2017-03-09",
+      source: "https://cristianvogel.bandcamp.com/track/etude-cristian-vogel-remix"
+    },
+    media: {
+      type: "bandcamp",
+      trackId: "33258256",
+      url: "https://cristianvogel.bandcamp.com/track/etude-cristian-vogel-remix",
+      caption: "Bandcamp stream"
+    }
+  },
+  {
     id: "p5",
     title: "Agnete & The Merman",
     year: "2017",
@@ -365,19 +388,19 @@ export const THESIS_TAGS_BY_PROJECT = {
     "qualitative sound gestures",
     "error as material",
     "critical theory",
-      "composition",
       "collaboration",
     "self-referential",
-    "feedback as dramaturgy"
+    "music drama"
   ],
+    // siege
   p7: [
+      "world-memorialising",
     "acousmatic",
-    "decay time",
-    "dramaturgical events",
+    "music drama",
     "qualitative sound gestures",
-    "opacity",
     "composition",
-    "listening to its conditions"
+    "electroacoustic",
+      "neural synthesis"
   ],
     // Further_in
   p3: [
@@ -428,13 +451,22 @@ export const THESIS_TAGS_BY_PROJECT = {
     "minimal viable staging",
     "dramaturgical events",
     "abstract story-telling",
-      "cinema",
+      "film-making",
       "collaboration",
     "world-building",
       "spatial score",
       "custom engineering",
-      "local network ops"
-  ]
+      "local networking protocols",
+      "performance documentation"
+  ],
+    // Etude
+    p8: [
+       "internet feedback",
+        "concept mapping",
+        "embracing the artefacts",
+        "restorative arc",
+        "network art"
+    ]
 };
 
 export const YOUTUBE_INFO_BY_PROJECT = {
@@ -508,8 +540,5 @@ export const WRITINGS = [
 ];
 
 export const COLLABORATORS = [
-  { name: "Dr. Elena Rostova", role: "Network Engineering Consultant", link: "#" },
-  { name: "Malmö Experimental Percussion Ensemble", role: "Performance", link: "#" },
-  { name: "Studio XYZ", role: "Hardware Fabrication", link: "#" },
-  { name: "Lund University Radio Society", role: "Testing and Infrastructure", link: "#" }
+
 ];

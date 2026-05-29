@@ -50,7 +50,7 @@ export default function App() {
       />
 
       <main className="w-full lg:pl-[380px] xl:pl-[420px] min-h-screen">
-        <div className="p-8 py-12 lg:p-20 xl:p-24 max-w-[1000px] mx-auto">
+        <div className="p-6 py-10 md:p-10 lg:p-16 xl:p-20 max-w-[1280px] mx-auto">
           {renderContent()}
         </div>
       </main>

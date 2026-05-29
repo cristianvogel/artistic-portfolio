@@ -73,23 +73,27 @@ export const CollaboratorsSection = ({ collaborators }) => (
 );
 
 export const ProjectSection = ({ project }) => (
-  <div className="animate-in fade-in duration-500 space-y-8 max-w-4xl">
-    <header className="mb-12">
-      <h2 className="text-3xl lg:text-6xl font-light tracking-tight mb-6">{project.title}</h2>
-      <div className="flex flex-wrap gap-6 text-xs font-mono uppercase tracking-widest text-neutral-500 mb-6">
-        <span>{project.year}</span>
-        <span>—</span>
-        <span>{project.type}</span>
+  <div className="animate-in fade-in duration-500 max-w-[1120px]">
+    <header className="border-b border-neutral-200 pb-8">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
+        <div>
+          <h2 className="max-w-4xl text-4xl font-light tracking-tight text-neutral-950 md:text-5xl lg:text-7xl">{project.title}</h2>
+          <div className="mt-6 flex flex-wrap gap-5 text-xs font-mono uppercase tracking-widest text-neutral-500">
+            <span>{project.year}</span>
+            <span>/</span>
+            <span>{project.type}</span>
+          </div>
+        </div>
+
+        <ProjectMetadata project={project} />
       </div>
-
-      <ProjectMetadata project={project} />
     </header>
-    <div className="card grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
-      <div id="project-media" className="md:col-span-1">
+    <div id="project-media" className="py-8 md:py-10">
+      <div className="w-full">
         <MediaRenderer media={project.media} title={project.title} />
         {project.duration && (
-          <dl className="mt-4 border-t border-neutral-200 pt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+          <dl className="mt-4 border-t border-neutral-200 pt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 md:max-w-sm md:ml-auto">
             <div className="flex items-baseline justify-between gap-4">
               <dt>Duration</dt>
               <dd className="text-neutral-900">{project.duration}</dd>
@@ -97,9 +101,11 @@ export const ProjectSection = ({ project }) => (
           </dl>
         )}
       </div>
+    </div>
 
-      <div id="project-description" className="md:col-span-2 space-y-8">
-        <div className="prose prose-neutral prose-lg leading-relaxed text-neutral-800">
+    <div id="project-description" className="grid gap-10 border-t border-neutral-200 pt-8 lg:grid-cols-[minmax(0,720px)_minmax(260px,1fr)] lg:items-start">
+      <div className="space-y-8">
+        <div className="prose prose-neutral prose-lg max-w-none leading-relaxed text-neutral-800">
           <p><FormattedText text={project.description} /></p>
         </div>
         {project.notes?.length > 0 && (
@@ -129,9 +135,11 @@ export const ProjectSection = ({ project }) => (
             </div>
           </div>
         )}
-        <LoopGallery loops={project.loops} />
         <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
       </div>
+      <aside className="space-y-8 lg:border-l lg:border-neutral-200 lg:pl-8">
+        <LoopGallery loops={project.loops} />
+      </aside>
     </div>
   </div>
 );

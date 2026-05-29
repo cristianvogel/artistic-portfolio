@@ -141,12 +141,12 @@ export const LoopGallery = ({ loops }) => {
   if (!loops?.length) return null;
 
   return (
-    <section className="mt-14">
+    <section>
       <div className="mb-4 flex items-center gap-4">
         <h3 className="text-[10px] font-mono uppercase tracking-[0.22em] text-neutral-400">Motion Excerpts</h3>
         <span className="h-px flex-1 bg-neutral-200" />
       </div>
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
         {loops.map(loop => (
           <figure key={loop.src} className="group">
             <LoopVideo loop={loop} />
