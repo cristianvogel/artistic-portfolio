@@ -21,7 +21,7 @@ export const PROJECTS = [
     chronology: {
       primary: "14 Aug 2016",
       year: "2016",
-      label: "YouTube upload",
+      label: "Video",
       iso: "2016-08-14T06:21:52-07:00",
       source: "https://www.youtube.com/watch?v=g25OYPpf1kg"
     },
@@ -43,7 +43,7 @@ export const PROJECTS = [
     chronology: {
       primary: "19 Feb 2007",
       year: "2007",
-      label: "YouTube upload",
+      label: "Video",
       iso: "2007-02-19T04:35:34-08:00",
       source: "https://www.youtube.com/watch?v=eLegrc_mdnI"
     },
@@ -66,7 +66,7 @@ export const PROJECTS = [
     chronology: {
       primary: "26 Jun 2024",
       year: "2024",
-      label: "via nova prize announcement",
+      label: "Award",
       iso: "2024-06-26",
       source: "https://via-nova-ev.de/?p=4227"
     },
@@ -88,7 +88,7 @@ export const PROJECTS = [
     chronology: {
       primary: "09 Mar 2017",
       year: "2017",
-      label: "Bandcamp release",
+      label: "Release",
       iso: "2017-03-09",
       source: "https://cristianvogel.bandcamp.com/track/etude-cristian-vogel-remix"
     },
@@ -111,7 +111,7 @@ export const PROJECTS = [
     chronology: {
       primary: "24 Jun 2002",
       year: "2002",
-      label: "Messagesacomin EP release listing",
+      label: "Release",
       iso: "2002-06-24",
       source: "https://www.forcedexposure.com/Catalog/RRR.001EP.html"
     },
@@ -173,7 +173,7 @@ export const PROJECTS = [
     chronology: {
       primary: "2019",
       year: "2019",
-      label: "BornHack conference recording",
+      label: "Talk",
       iso: "2019",
       source: "https://www.youtube.com/watch?v=ZSZFAXJsrOE"
     },
@@ -195,7 +195,7 @@ export const PROJECTS = [
     chronology: {
       primary: "25 Jan 2023",
       year: "2023",
-      label: "Danish Composers Society / Nye Veje announcement",
+      label: "Grant",
       iso: "2023-01-25",
       source: "https://www.komponistforeningen.dk/seks-modtagere-af-legatet-nye-veje-er-fundet"
     },
@@ -218,7 +218,7 @@ export const PROJECTS = [
     chronology: {
       primary: "03 Mar 2005",
       year: "2005",
-      label: "Cie Gilles Jobin production page",
+      label: "Website",
       iso: "2005-03-03",
       source: "https://www.gillesjobin.com/en/creation-en/steak-house/"
     },
@@ -239,7 +239,7 @@ export const PROJECTS = [
     chronology: {
       primary: "06 Mar 2008",
       year: "2008",
-      label: "Cie Gilles Jobin production page",
+      label: "Website",
       iso: "2008-03-06",
       source: "https://www.gillesjobin.com/en/creation-en/text-to-speech/"
     },
@@ -279,7 +279,7 @@ export const PROJECTS = [
     chronology: {
       primary: "2017",
       year: "2017",
-      label: "Partner page metadata",
+      label: "Website",
       iso: "2017",
       source: "https://www.theautomaticmessage.com/work/agnete-the-merman"
     },
@@ -343,11 +343,11 @@ export const PROJECTS = [
     type: "Film / Audio Visual Sound Design",
     duration: "starts at 06:29",
     focusTags: ["Political Questions", "Radio Artefacts", "Sound Design", "Voice", "Documentary Fiction"],
-    description: "Film work by Anja Behrens, developed from material made with Sydhavn Teater for Requiem for en tidsalder. For this portfolio the video opens at 06:29, where the sound design is most relevant to The Mesh Cycle: political questions are carried through voice, transmission residue, and radio-like artefacts, with the score treating unstable broadcast textures as dramaturgical material. Cristian Vogel is credited for music, sound design, and editing.",
+    description: "Collaboration with Anja Behrens. For this portfolio the video opens at 06:29, where the sound design is most relevant to The Mesh Cycle: political questions are carried through voice, transmission residue, and radio-like artefacts, with the score treating unstable broadcast textures as dramaturgical material. Cristian Vogel is credited for music, sound design, and editing.",
     chronology: {
       primary: "27 May - 05 Jun 2021",
       year: "2021",
-      label: "Anja Behrens production page / CPH Stage",
+      label: "Website",
       iso: "2021-05-27",
       endIso: "2021-06-05",
       source: "https://anjabehrens.com/portfolio-item/requiem-for-an-age/"
@@ -373,7 +373,7 @@ export const PROJECTS = [
     chronology: {
       primary: "04 Jul 2020",
       year: "2020",
-      label: "YouTube upload",
+      label: "Video",
       iso: "2020-07-04T12:06:53-07:00",
       source: "https://www.youtube.com/watch?v=tYQxM1MP6AI"
     },
@@ -439,7 +439,7 @@ export const PROJECTS = [
     chronology: {
       primary: "2020",
       year: "2020",
-      label: "HEARding Cats Collective page",
+      label: "Website",
       iso: "2020",
       source: "https://www.heardingcatscollective.com/cristian-vogel"
     },
@@ -514,7 +514,7 @@ export const PROJECTS = [
     chronology: {
       primary: "02 Oct - 17 Nov 2021",
       year: "2021",
-      label: "Echoes first published",
+      label: "Website",
       iso: "2021-10-02T10:32:22.275Z",
       endIso: "2021-11-17T14:55:48.422Z",
       source: "https://explore.echoes.xyz"

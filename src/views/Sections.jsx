@@ -1,7 +1,6 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { LoopGallery } from '../components/LoopGallery.jsx';
 import { MediaRenderer } from '../components/Media.jsx';
-import { ProjectMetadata } from '../components/ProjectMetadata.jsx';
 import { ThesisTagGrid } from '../components/ThesisTagGrid.jsx';
 import { FormattedText } from '../components/FormattedText.jsx';
 
@@ -80,18 +79,7 @@ export const CollaboratorsSection = ({ collaborators }) => (
 export const ProjectSection = ({ project }) => (
   <div className="animate-in fade-in duration-500 max-w-[1120px]">
     <header className="border-b border-neutral-200 pb-8">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
-        <div>
-          <h2 className="max-w-4xl text-4xl font-light tracking-tight text-neutral-950 md:text-5xl lg:text-7xl">{project.title}</h2>
-          <div className="mt-6 flex flex-wrap gap-5 text-xs font-mono uppercase tracking-widest text-neutral-500">
-            <span>{project.year}</span>
-            <span>/</span>
-            <span>{project.type}</span>
-          </div>
-        </div>
-
-        <ProjectMetadata project={project} />
-      </div>
+      <h2 className="max-w-4xl text-4xl font-light tracking-tight text-neutral-950 md:text-5xl lg:text-7xl">{project.title}</h2>
     </header>
 
     <div id="project-media" className="py-8 md:py-10">
@@ -113,6 +101,16 @@ export const ProjectSection = ({ project }) => (
         <div className="prose prose-neutral prose-lg max-w-none leading-relaxed text-neutral-800">
           <p><FormattedText text={project.description} /></p>
         </div>
+        {project.chronology?.source && (
+          <a
+            href={project.chronology.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center gap-1 border-b border-neutral-300 pb-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-neutral-400 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+          >
+            Source <ExternalLink size={11} />
+          </a>
+        )}
         {project.notes?.length > 0 && (
           <div className="border-y border-neutral-200 py-4">
             <h3 className="mb-3 text-[10px] font-mono uppercase tracking-[0.22em] text-neutral-400">Performance Notes</h3>

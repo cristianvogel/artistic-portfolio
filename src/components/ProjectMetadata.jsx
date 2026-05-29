@@ -10,7 +10,7 @@ export const ProjectMetadata = ({ project }) => {
 
   return (
     <dl
-      className="mt-6 grid grid-cols-1 gap-4 border-y border-neutral-200 py-5 sm:grid-cols-3 lg:mt-0 lg:grid-cols-1"
+      className="mt-6 grid grid-cols-1 gap-4 border-y border-neutral-200 py-5 sm:grid-cols-2 lg:mt-0 lg:grid-cols-1"
       data-meta-date={project.chronology.iso}
       data-meta-end-date={project.chronology.endIso}
       data-meta-source={project.chronology.source}
@@ -18,15 +18,14 @@ export const ProjectMetadata = ({ project }) => {
       <MetaRow label="Date">
         <time dateTime={project.chronology.iso}>{project.chronology.primary}</time>
       </MetaRow>
-      <MetaRow label="Date source">{project.chronology.label}</MetaRow>
-      <MetaRow label="Source URL">
+      <MetaRow label="Source">
         <a
           href={project.chronology.source}
           target="_blank"
           rel="noopener noreferrer"
           className="underline decoration-neutral-300 underline-offset-4 hover:text-neutral-950"
         >
-          {project.chronology.source.replace(/^https?:\/\//, '')}
+          {project.chronology.label}
         </a>
       </MetaRow>
     </dl>
