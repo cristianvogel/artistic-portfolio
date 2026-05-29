@@ -1,0 +1,65 @@
+{
+  "source": "https://player.vimeo.com/video/534604452?h=b8559b5d39",
+  "title": "Agnete & The Merman",
+  "uploader": "The Automatic Message",
+  "duration": 3252.458667,
+  "optimalRes": "1920x1080",
+  "outputWidth": 1920,
+  "encode": {
+    "crf": 24,
+    "preset": "slow",
+    "fps": 30,
+    "audioBitrate": "160k"
+  },
+  "generatedAt": "2026-05-29T15:29:49.153Z",
+  "loops": [
+    {
+      "src": "/generated-loops/agnete-merman/loop-01.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-01.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 06:36",
+      "timecode": "06:36",
+      "audio": true,
+      "score": 84.4
+    },
+    {
+      "src": "/generated-loops/agnete-merman/loop-02.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-02.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 09:44",
+      "timecode": "09:44",
+      "audio": true,
+      "score": 148.7
+    },
+    {
+      "src": "/generated-loops/agnete-merman/loop-03.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-03.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 25:25",
+      "timecode": "25:25",
+      "audio": true,
+      "score": 74.5
+    },
+    {
+      "src": "/generated-loops/agnete-merman/loop-04.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-04.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 34:49",
+      "timecode": "34:49",
+      "audio": true,
+      "score": 78.4
+    },
+    {
+      "src": "/generated-loops/agnete-merman/loop-05.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-05.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 41:05",
+      "timecode": "41:05",
+      "audio": true,
+      "score": 89.9
+    },
+    {
+      "src": "/generated-loops/agnete-merman/loop-06.mp4",
+      "poster": "/generated-loops/agnete-merman/poster-06.jpg",
+      "alt": "Agnete & The Merman 15 second loop at 44:13",
+      "timecode": "44:13",
+      "audio": true,
+      "score": 128.6
+    }
+  ]
+}

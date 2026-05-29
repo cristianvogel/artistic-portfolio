@@ -88,12 +88,47 @@ export const ProjectSection = ({ project }) => (
 
       <div id="project-media" className="md:col-span-1">
         <MediaRenderer media={project.media} title={project.title} />
+        {project.duration && (
+          <dl className="mt-4 border-t border-neutral-200 pt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+            <div className="flex items-baseline justify-between gap-4">
+              <dt>Duration</dt>
+              <dd className="text-neutral-900">{project.duration}</dd>
+            </div>
+          </dl>
+        )}
       </div>
 
       <div id="project-description" className="md:col-span-2 space-y-8">
         <div className="prose prose-neutral prose-lg leading-relaxed text-neutral-800">
           <p><FormattedText text={project.description} /></p>
         </div>
+        {project.notes?.length > 0 && (
+          <div className="border-y border-neutral-200 py-4">
+            <h3 className="mb-3 text-[10px] font-mono uppercase tracking-[0.22em] text-neutral-400">Performance Notes</h3>
+            <div className="grid gap-4">
+              {project.notes.map(note => (
+                <a
+                  key={note.label}
+                  href={note.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group grid gap-2 text-sm text-neutral-700"
+                >
+                  <span className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 group-hover:text-neutral-900">
+                    <span>{note.label}</span>
+                    {note.venue && <span className="text-neutral-400">{note.venue}</span>}
+                    {note.date && <span className="text-neutral-400">{note.date}</span>}
+                    {note.location && <span className="text-neutral-400">{note.location}</span>}
+                  </span>
+                  <span className="leading-relaxed group-hover:text-neutral-950">{note.text}</span>
+                  <span className="inline-flex w-fit items-center gap-1 border-b border-neutral-300 pb-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-neutral-400 transition-colors group-hover:border-neutral-900 group-hover:text-neutral-900">
+                    Source <ExternalLink size={11} />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
         <LoopGallery loops={project.loops} />
         <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
       </div>

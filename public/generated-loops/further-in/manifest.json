@@ -1,0 +1,49 @@
+{
+  "source": "https://www.youtube.com/watch?v=tYQxM1MP6AI",
+  "title": "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20",
+  "uploader": "further_in",
+  "duration": 1318.266667,
+  "optimalRes": "1920x1080",
+  "outputWidth": 1920,
+  "encode": {
+    "crf": 24,
+    "preset": "slow",
+    "fps": 30,
+    "audioBitrate": "160k"
+  },
+  "generatedAt": "2026-05-29T13:48:15.960Z",
+  "loops": [
+    {
+      "src": "/generated-loops/further-in/loop-01.mp4",
+      "poster": "/generated-loops/further-in/poster-01.jpg",
+      "alt": "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20 15 second loop at 08:26",
+      "timecode": "08:26",
+      "audio": true,
+      "score": 145.4
+    },
+    {
+      "src": "/generated-loops/further-in/loop-02.mp4",
+      "poster": "/generated-loops/further-in/poster-02.jpg",
+      "alt": "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20 15 second loop at 11:40",
+      "timecode": "11:40",
+      "audio": true,
+      "score": 122.2
+    },
+    {
+      "src": "/generated-loops/further-in/loop-03.mp4",
+      "poster": "/generated-loops/further-in/poster-03.jpg",
+      "alt": "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20 15 second loop at 13:17",
+      "timecode": "13:17",
+      "audio": true,
+      "score": 126.1
+    },
+    {
+      "src": "/generated-loops/further-in/loop-04.mp4",
+      "poster": "/generated-loops/further-in/poster-04.jpg",
+      "alt": "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20 15 second loop at 18:09",
+      "timecode": "18:09",
+      "audio": true,
+      "score": 106.6
+    }
+  ]
+}

@@ -15,6 +15,7 @@ export const PROJECTS = [
     year: "2016",
     category: "Interdisciplinary",
     type: "Generative Performance",
+    duration: "09:19",
     focusTags: ["Action Score", "Generative Combinatorics", "Acousmatic", "Symbolic", "Shortwave Sounds"],
     description: "Video artwork exploring action score and critical theory representation./n/n" + "Driven by acousmatic drift, stray radio waves, and slow-motion recordings, a tautological music machine simulates activity to an empty room. The human operator gets hungry, abandons the frame for a late-night grill house, and leaves the apparatus behind, fully capable of churning away its own existence without him.",
     chronology: {
@@ -36,8 +37,9 @@ export const PROJECTS = [
     year: "2007",
     category: "Composition",
     type: "Installation / Sound Art",
+    duration: "04:51",
     focusTags: ["Original Score", "No-Input Mixer"],
-    description: "A collaborative piece with Mexican installation artist Stefan Bruggerman, relying heavily on no-input mixing techniques.",
+    description: "A collaborative piece with Mexican installation artist Stefan Bruggerman, relying heavily on no-input mixing techniques as a conceptually aligned generative music system.",
     chronology: {
       primary: "19 Feb 2007",
       year: "2007",
@@ -52,13 +54,54 @@ export const PROJECTS = [
     }
   },
   {
+    id: "p7",
+    title: "The Siege of Mariupol",
+    year: "2024",
+    category: "Composition",
+    type: "Acousmatic Composition",
+    duration: "05:46",
+    focusTags: ["Acousmatic", "Competition", "Electroacoustic"],
+    description: "Acousmatic composition awarded joint first prize in the Acousmatic category of the 25th International Composition Competitions 2024, presented by via nova.",
+    chronology: {
+      primary: "26 Jun 2024",
+      year: "2024",
+      label: "via nova prize announcement",
+      iso: "2024-06-26",
+      source: "https://via-nova-ev.de/?p=4227"
+    },
+    media: {
+      type: "audio",
+      url: "/audio/The%20Siege%20Of%20Mariupol-5m40s-CompetitionWinningEdit.opus",
+      caption: "Competition edit"
+    }
+  },
+  {
     id: "p5",
     title: "Agnete & The Merman",
     year: "2017",
     category: "Major Works",
     type: "Feature Length Experimental Dance Film",
+    duration: "54:12",
     focusTags: ["Feature Film", "Experimental Dance", "Immersive Sound", "High Order Ambisonics", "Surround Sound"],
-    description: "A 55 minute film adaptation of Cristian Vogel's spatial sound and live theatre production, commissioned by Aarhus European Capital of Culture 2017 and filmed by The Automatic Message during the Danish production.",
+    description: "A 55 minute film adaptation of Cristian Vogel's spatial sound and live theatre production, commissioned by Aarhus European Capital of Culture 2017, performed on 24 speakers and filmed by The Automatic Message during the Danish production.",
+    notes: [
+      {
+        label: "ZKM inSonic2017",
+        venue: "ZKM Karlsruhe / Kubus",
+        location: "Karlsruhe",
+        date: "Dec 2017",
+        text: "Presented at ZKM Karlsruhe as part of inSonic2017: Immersive Future in a fixed-media version for video and multi-channel audio.",
+        source: "https://zkm.de/en/event/2017/12/insonic2017-concerts"
+      },
+      {
+        label: "Strom 2020",
+        venue: "Berliner Philharmonie",
+        location: "Berlin",
+        date: "Feb 2020",
+        text: "Adapted as a live concert performance for Strom Festival at the Berliner Philharmonie.",
+        source: "https://groove.de/2020/02/21/strom-festival-wer-nicht-wagt-der-nicht-gewinnt/"
+      }
+    ],
     chronology: {
       primary: "2017",
       year: "2017",
@@ -75,28 +118,46 @@ export const PROJECTS = [
     },
     loops: [
       {
-        src: "/agnete-loops/loop-01.mp4",
-        poster: "/agnete-stills/still-01.jpg",
-        alt: "Agnete & The Merman 15 second loop at 05:40",
-        timecode: "05:40"
+        src: "/generated-loops/agnete-merman/loop-01.mp4",
+        poster: "/generated-loops/agnete-merman/poster-01.jpg",
+        alt: "Agnete & The Merman 15 second loop at 06:36",
+        timecode: "06:36",
+        audio: true
       },
       {
-        src: "/agnete-loops/loop-02.mp4",
-        poster: "/agnete-stills/still-02.jpg",
-        alt: "Agnete & The Merman 15 second loop at 14:20",
-        timecode: "14:20"
+        src: "/generated-loops/agnete-merman/loop-02.mp4",
+        poster: "/generated-loops/agnete-merman/poster-02.jpg",
+        alt: "Agnete & The Merman 15 second loop at 09:44",
+        timecode: "09:44",
+        audio: true
       },
       {
-        src: "/agnete-loops/loop-03.mp4",
-        poster: "/agnete-stills/still-04.jpg",
-        alt: "Agnete & The Merman 15 second loop at 36:45",
-        timecode: "36:45"
+        src: "/generated-loops/agnete-merman/loop-03.mp4",
+        poster: "/generated-loops/agnete-merman/poster-03.jpg",
+        alt: "Agnete & The Merman 15 second loop at 25:25",
+        timecode: "25:25",
+        audio: true
       },
       {
-        src: "/agnete-loops/loop-04.mp4",
-        poster: "/agnete-stills/still-05.jpg",
-        alt: "Agnete & The Merman 15 second loop at 48:30",
-        timecode: "48:30"
+        src: "/generated-loops/agnete-merman/loop-04.mp4",
+        poster: "/generated-loops/agnete-merman/poster-04.jpg",
+        alt: "Agnete & The Merman 15 second loop at 34:49",
+        timecode: "34:49",
+        audio: true
+      },
+      {
+        src: "/generated-loops/agnete-merman/loop-05.mp4",
+        poster: "/generated-loops/agnete-merman/poster-05.jpg",
+        alt: "Agnete & The Merman 15 second loop at 41:05",
+        timecode: "41:05",
+        audio: true
+      },
+      {
+        src: "/generated-loops/agnete-merman/loop-06.mp4",
+        poster: "/generated-loops/agnete-merman/poster-06.jpg",
+        alt: "Agnete & The Merman 15 second loop at 44:13",
+        timecode: "44:13",
+        audio: true
       }
     ]
   },
@@ -106,8 +167,9 @@ export const PROJECTS = [
     year: "2020",
     category: "Realtime",
     type: "Generative Performance",
+    duration: "21:58",
     focusTags: ["Generative", "Geo-Location", "Sound Score"],
-    description: "A live broadcast performance functioning as a geo-location based generative sound score. Mapping coordinate data is actively tracked and translated into musical instructions.",
+    description: "Commissioned by BrokenSonics, London during pandemic lock-down. Live code streaming performance, generative sound score with events driven by geo-locative data.",
     chronology: {
       primary: "04 Jul 2020",
       year: "2020",
@@ -119,7 +181,51 @@ export const PROJECTS = [
       type: "youtube",
       url: "https://www.youtube.com/embed/tYQxM1MP6AI",
       caption: "further_in live performance screen capture"
-    }
+    },
+    loops: [
+      {
+        src: "/generated-loops/further-in-extra/loop-01.mp4",
+        poster: "/generated-loops/further-in-extra/poster-01.jpg",
+        alt: "further_in live performance 15 second loop at 04:45",
+        timecode: "04:45",
+        audio: true
+      },
+      {
+        src: "/generated-loops/further-in/loop-01.mp4",
+        poster: "/generated-loops/further-in/poster-01.jpg",
+        alt: "further_in live performance 15 second loop at 08:26",
+        timecode: "08:26",
+        audio: true
+      },
+      {
+        src: "/generated-loops/further-in/loop-02.mp4",
+        poster: "/generated-loops/further-in/poster-02.jpg",
+        alt: "further_in live performance 15 second loop at 11:40",
+        timecode: "11:40",
+        audio: true
+      },
+      {
+        src: "/generated-loops/further-in-extra/loop-02.mp4",
+        poster: "/generated-loops/further-in-extra/poster-02.jpg",
+        alt: "further_in live performance 15 second loop at 12:30",
+        timecode: "12:30",
+        audio: true
+      },
+      {
+        src: "/generated-loops/further-in/loop-03.mp4",
+        poster: "/generated-loops/further-in/poster-03.jpg",
+        alt: "further_in live performance 15 second loop at 13:17",
+        timecode: "13:17",
+        audio: true
+      },
+      {
+        src: "/generated-loops/further-in/loop-04.mp4",
+        poster: "/generated-loops/further-in/poster-04.jpg",
+        alt: "further_in live performance 15 second loop at 18:09",
+        timecode: "18:09",
+        audio: true
+      }
+    ]
   },
   {
     id: "p6",
@@ -127,6 +233,7 @@ export const PROJECTS = [
     year: "2026",
     category: "Realtime",
     type: "Live Performance",
+    duration: "1:07:05",
     focusTags: ["Realtime", "Live Electronics", "Performance", "Pandemic"],
     description: "Live code streaming performance commissioned by HEARding Cats Collective (St.Louis, USA) during pandemic. Connects live electronic music practice with creative code. Realtime parametric sound synthesis and fixed-field world-building simultaneously driven by real geo-locative data.",
     chronology: {
@@ -184,6 +291,13 @@ export const PROJECTS = [
         poster: "/generated-loops/hearding-cats/poster-05.jpg",
         alt: "Cristian Vogel - Inglorious Images 15 second loop at 59:30",
         timecode: "59:30",
+        audio: true
+      },
+      {
+        src: "/generated-loops/hearding-cats/loop-06.mp4",
+        poster: "/generated-loops/hearding-cats/poster-06.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 01:02:25",
+        timecode: "01:02:25",
         audio: true
       }
     ]
@@ -245,32 +359,52 @@ export const THESIS_TAGS_BY_PROJECT = {
     "critical theory",
     "performative"
   ],
+    // nothing
   p2: [
     "technical constraints",
     "qualitative sound gestures",
-    "opacity",
-    "abstraction",
-    "interference",
-    "congestion",
-    "dramaturgical events"
+    "error as material",
+    "critical theory",
+      "composition",
+      "collaboration",
+    "self-referential",
+    "feedback as dramaturgy"
   ],
+  p7: [
+    "acousmatic",
+    "decay time",
+    "dramaturgical events",
+    "qualitative sound gestures",
+    "opacity",
+    "composition",
+    "listening to its conditions"
+  ],
+    // Further_in
   p3: [
     "situated interaction",
     "local geography",
-    "nomadic performance",
-    "network field",
-    "real-time",
+      "world-modulating",
+      "creative coding",
+    "digital nomadic",
+    "network art",
+    "real-time / live-stream",
     "decentralised direction",
-    "call for action"
+      "pandemic art",
+      "network art",
+      "geo-data driven"
   ],
     // Inglorious Images
   p6: [
     "real-time",
     "parametric synthesis",
-    "experimental programming",
+      "world-modulating",
+    "creative coding",
     "situated performance",
-      "live stream",
-    "networked context"
+      "pandemic art",
+      "real-time / live-stream",
+      "digital nomadic",
+      "network art",
+      "geo-data driven"
   ],
     // Pod walks
   p4: [
@@ -287,14 +421,19 @@ export const THESIS_TAGS_BY_PROJECT = {
       "sensor-driven",
       "spatial composition"
   ],
+    // Agnete & The Merman
   p5: [
     "music drama",
-    "restorative arc",
-    "listening to its conditions",
+    "restorative mythology",
+    "minimal viable staging",
     "dramaturgical events",
-    "sound design",
+    "abstract story-telling",
+      "cinema",
+      "collaboration",
     "world-building",
-    "resilient music"
+      "spatial score",
+      "custom engineering",
+      "local network ops"
   ]
 };
 

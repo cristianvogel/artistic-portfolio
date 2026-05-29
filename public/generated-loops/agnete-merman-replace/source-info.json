@@ -1,0 +1,16 @@
+{
+  "id": "534604452",
+  "title": "Agnete & The Merman",
+  "uploader": "The Automatic Message",
+  "duration": 3252,
+  "optimalRes": "1920x1080",
+  "optimalResolution": {
+    "label": "1920x1080",
+    "width": 1920,
+    "height": 1080,
+    "formatId": "hls-fastly_skyfire-3492",
+    "videoCodec": "avc1.640028",
+    "audioCodec": null
+  },
+  "webpageUrl": "https://player.vimeo.com/video/534604452?h=b8559b5d39"
+}

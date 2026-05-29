@@ -11,7 +11,7 @@
     "fps": 30,
     "audioBitrate": "160k"
   },
-  "generatedAt": "2026-05-29T12:49:36.932Z",
+  "generatedAt": "2026-05-29T13:43:12.116Z",
   "loops": [
     {
       "src": "/generated-loops/hearding-cats/loop-01.mp4",
@@ -50,6 +50,14 @@
       "poster": "/generated-loops/hearding-cats/poster-05.jpg",
       "alt": "Cristian Vogel - Inglorious Images 15 second loop at 59:30",
       "timecode": "59:30",
+      "audio": true,
+      "score": 0
+    },
+    {
+      "src": "/generated-loops/hearding-cats/loop-06.mp4",
+      "poster": "/generated-loops/hearding-cats/poster-06.jpg",
+      "alt": "Cristian Vogel - Inglorious Images 15 second loop at 01:02:25",
+      "timecode": "01:02:25",
       "audio": true,
       "score": 0
     }
