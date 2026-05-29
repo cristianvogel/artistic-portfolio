@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.loop-grabber-venv
+.tmp-loop-grabber
 
 # Editor directories and files
 .vscode/*

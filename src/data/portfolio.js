@@ -11,12 +11,12 @@ export const ABSTRACT_DATA = {
 export const PROJECTS = [
   {
     id: "p1",
-    title: "Acousmatic Study",
+    title: "Acousmatic Action",
     year: "2016",
     category: "Interdisciplinary",
     type: "Generative Performance",
-    focusTags: ["Original Score", "Generative Performance", "Acousmatic", "Symbolic", "Shortwave Sounds"],
-    description: "An unexhibited artwork exploring generative performance and symbolic representation.",
+    focusTags: ["Action Score", "Generative Combinatorics", "Acousmatic", "Symbolic", "Shortwave Sounds"],
+    description: "Video artwork exploring action score and critical theory representation./n/n" + "Driven by acousmatic drift, stray radio waves, and slow-motion recordings, a tautological music machine simulates activity to an empty room. The human operator gets hungry, abandons the frame for a late-night grill house, and leaves the apparatus behind, fully capable of churning away its own existence without him.",
     chronology: {
       primary: "14 Aug 2016",
       year: "2016",
@@ -27,7 +27,7 @@ export const PROJECTS = [
     media: {
       type: "youtube",
       url: "https://www.youtube.com/embed/g25OYPpf1kg",
-      caption: "Unexhibited artwork [Excerpt]"
+      caption: "Video"
     }
   },
   {
@@ -123,17 +123,17 @@ export const PROJECTS = [
   },
   {
     id: "p6",
-    title: "Cristian Vogel / HEARding Cats Collective",
+    title: "Inglorious Images live at HEARding Cats Collective",
     year: "2026",
     category: "Realtime",
     type: "Live Performance",
-    focusTags: ["Realtime", "Live Electronics", "Performance"],
-    description: "A realtime performance context documented by HEARding Cats Collective, connecting live electronic music practice with artist-led experimental programming.",
+    focusTags: ["Realtime", "Live Electronics", "Performance", "Pandemic"],
+    description: "Live code streaming performance commissioned by HEARding Cats Collective (St.Louis, USA) during pandemic. Connects live electronic music practice with creative code. Realtime parametric sound synthesis and fixed-field world-building simultaneously driven by real geo-locative data.",
     chronology: {
-      primary: "2026",
-      year: "2026",
+      primary: "2020",
+      year: "2020",
       label: "HEARding Cats Collective page",
-      iso: "2026",
+      iso: "2020",
       source: "https://www.heardingcatscollective.com/cristian-vogel"
     },
     media: {
@@ -142,14 +142,51 @@ export const PROJECTS = [
         {
           title: "HEARding Cats Collective page",
           url: "https://www.heardingcatscollective.com/cristian-vogel",
-          date: "2026",
+          date: "2020",
           metaLabel: "external reference",
-          metaIso: "2026",
+          metaIso: "2020",
           image: "/other-stills/ingloriousImages.webp"
         }
       ],
       caption: "Open the HEARding Cats Collective page for event and artist context."
-    }
+    },
+    loops: [
+      {
+        src: "/generated-loops/hearding-cats/loop-01.mp4",
+        poster: "/generated-loops/hearding-cats/poster-01.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 02:38",
+        timecode: "02:38",
+        audio: true
+      },
+      {
+        src: "/generated-loops/hearding-cats/loop-02.mp4",
+        poster: "/generated-loops/hearding-cats/poster-02.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 18:41",
+        timecode: "18:41",
+        audio: true
+      },
+      {
+        src: "/generated-loops/hearding-cats/loop-03.mp4",
+        poster: "/generated-loops/hearding-cats/poster-03.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 30:04",
+        timecode: "30:04",
+        audio: true
+      },
+      {
+        src: "/generated-loops/hearding-cats/loop-04.mp4",
+        poster: "/generated-loops/hearding-cats/poster-04.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 45:47",
+        timecode: "45:47",
+        audio: true
+      },
+      {
+        src: "/generated-loops/hearding-cats/loop-05.mp4",
+        poster: "/generated-loops/hearding-cats/poster-05.jpg",
+        alt: "Cristian Vogel - Inglorious Images 15 second loop at 59:30",
+        timecode: "59:30",
+        audio: true
+      }
+    ]
   },
   {
     id: "p4",
@@ -202,12 +239,11 @@ export const PROJECTS = [
 export const THESIS_TAGS_BY_PROJECT = {
   p1: [
     "acousmatic",
-    "visible source recedes",
-    "transmitted instructions",
-    "local reconstruction",
-    "hidden signals",
-    "fragmented",
-    "hard-to-read sonic signals"
+    "decay time",
+    "electromechanical",
+    "local installation",
+    "critical theory",
+    "performative"
   ],
   p2: [
     "technical constraints",
@@ -227,23 +263,29 @@ export const THESIS_TAGS_BY_PROJECT = {
     "decentralised direction",
     "call for action"
   ],
+    // Inglorious Images
   p6: [
     "real-time",
-    "live electronics",
-    "artist-led infrastructure",
+    "parametric synthesis",
     "experimental programming",
     "situated performance",
-    "public presentation",
+      "live stream",
     "networked context"
   ],
+    // Pod walks
   p4: [
-    "centralised infrastructure",
-    "platform provider",
-    "terminated",
-    "local routing",
-    "hard-to-reach locations",
-    "community-run nodes",
-    "sovereignty"
+      "music drama",
+      "situated story telling",
+    "centralised",
+    "platform controlled",
+    "non-sovereign",
+      "heteronomy",
+    "world-inhabiting",
+    "geo-locative",
+    "action based",
+      "streaming",
+      "sensor-driven",
+      "spatial composition"
   ],
   p5: [
     "music drama",
@@ -271,7 +313,7 @@ export const YOUTUBE_INFO_BY_PROJECT = {
       uploaded: "14 Aug 2016",
       duration: "09:19",
       views: "20",
-      comments: "Not exposed in public watch metadata",
+      comments: "archive",
       source: "https://www.youtube.com/watch?v=g25OYPpf1kg"
     }
   },
@@ -287,7 +329,7 @@ export const YOUTUBE_INFO_BY_PROJECT = {
       uploaded: "19 Feb 2007",
       duration: "04:51",
       views: "2,265",
-      comments: "Not exposed in public watch metadata",
+      comments: "archive",
       source: "https://www.youtube.com/watch?v=eLegrc_mdnI"
     }
   },
@@ -303,7 +345,7 @@ export const YOUTUBE_INFO_BY_PROJECT = {
       uploaded: "04 Jul 2020",
       duration: "21:58",
       views: "241",
-      comments: "Not exposed in public watch metadata",
+      comments: "archive",
       source: "https://www.youtube.com/watch?v=tYQxM1MP6AI"
     }
   }

@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "loop:grab": "node scripts/loop-grabber.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

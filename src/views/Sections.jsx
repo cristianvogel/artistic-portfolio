@@ -3,12 +3,13 @@ import { LoopGallery } from '../components/LoopGallery.jsx';
 import { MediaRenderer } from '../components/Media.jsx';
 import { ProjectMetadata } from '../components/ProjectMetadata.jsx';
 import { ThesisTagGrid } from '../components/ThesisTagGrid.jsx';
+import { FormattedText } from '../components/FormattedText.jsx';
 
 export const AbstractSection = ({ abstractData }) => (
   <div className="animate-in fade-in duration-500 space-y-8">
     <h2 className="text-3xl lg:text-5xl font-light tracking-tight mb-12">Abstract</h2>
     <div className="prose prose-neutral prose-lg max-w-3xl leading-relaxed">
-      <p>{abstractData.text}</p>
+      <p><FormattedText text={abstractData.text} /></p>
     </div>
     <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-neutral-200">
       <div>
@@ -83,18 +84,19 @@ export const ProjectSection = ({ project }) => (
 
       <ProjectMetadata project={project} />
     </header>
+    <div className="card grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
-    <div className="my-12">
-      <MediaRenderer media={project.media} title={project.title} />
-    </div>
-
-    <LoopGallery loops={project.loops} />
-
-    <div className="max-w-3xl">
-      <div className="prose prose-neutral prose-lg leading-relaxed text-neutral-800">
-        <p>{project.description}</p>
+      <div id="project-media" className="md:col-span-1">
+        <MediaRenderer media={project.media} title={project.title} />
       </div>
-      <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
+
+      <div id="project-description" className="md:col-span-2 space-y-8">
+        <div className="prose prose-neutral prose-lg leading-relaxed text-neutral-800">
+          <p><FormattedText text={project.description} /></p>
+        </div>
+        <LoopGallery loops={project.loops} />
+        <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
+      </div>
     </div>
   </div>
 );

@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { ExternalLink, Pause, Play, Volume2 } from 'lucide-react';
+import { FormattedText } from './FormattedText.jsx';
 
 const getYouTubeId = url => {
   const match = url.match(/\/embed\/([^?]+)/);
@@ -81,7 +82,7 @@ export const MinimalAudioPlayer = ({ url, caption }) => {
         </div>
         <Volume2 size={16} className="text-neutral-400" />
       </div>
-      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider">{caption}</p>}
+      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider"><FormattedText text={caption} /></p>}
     </div>
   );
 };
@@ -91,7 +92,7 @@ export const MinimalVideoPlayer = ({ url, caption }) => (
     <div className="border border-neutral-300 bg-neutral-100 relative w-full aspect-video">
       <video controls className="w-full h-full object-cover" src={url} preload="metadata" />
     </div>
-    {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">{caption}</p>}
+    {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={caption} /></p>}
   </div>
 );
 
@@ -132,7 +133,7 @@ export const YouTubeEmbed = ({ url, caption }) => {
           </button>
         )}
       </div>
-      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">{caption}</p>}
+      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={caption} /></p>}
     </div>
   );
 };
@@ -174,14 +175,14 @@ export const VimeoEmbed = ({ media }) => {
           </button>
         )}
       </div>
-      {media.caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">{media.caption}</p>}
+      {media.caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={media.caption} /></p>}
     </div>
   );
 };
 
 export const MultiWorkGrid = ({ works, caption }) => (
   <div className="flex flex-col gap-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 gap-4">
       {works.map((work, idx) => (
         <a
           key={idx}
@@ -225,7 +226,7 @@ export const MultiWorkGrid = ({ works, caption }) => (
         </a>
       ))}
     </div>
-    {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider text-center">{caption}</p>}
+    {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider text-center"><FormattedText text={caption} /></p>}
   </div>
 );
 
@@ -255,7 +256,9 @@ export const MediaRenderer = ({ media, title }) => {
       <div className="flex flex-col gap-2">
         <img src={media.url} alt={title} className="w-full h-auto border border-neutral-200" />
         {media.caption && (
-          <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">{media.caption}</p>
+          <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">
+            <FormattedText text={media.caption} />
+          </p>
         )}
       </div>
     );
