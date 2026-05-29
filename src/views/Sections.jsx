@@ -37,16 +37,21 @@ export const WritingSection = ({ writings }) => (
     <h2 className="text-3xl lg:text-5xl font-light tracking-tight mb-12">Writing & Research</h2>
     <div className="space-y-16 max-w-3xl">
       {writings.map(item => (
-        <article key={item.id} className="group cursor-pointer">
+        <article key={item.id} className="group">
           <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-4">
             <h3 className="text-xl font-medium group-hover:underline underline-offset-4">{item.title}</h3>
             <span className="text-xs font-mono text-neutral-400">{item.year}</span>
           </div>
           <p className="text-sm font-mono uppercase tracking-widest text-neutral-500 mb-6">{item.publication}</p>
           <p className="text-neutral-700 leading-relaxed">{item.excerpt}</p>
-          <div className="mt-4 flex items-center text-sm font-medium text-neutral-900">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center text-sm font-medium text-neutral-900"
+          >
             Read full text <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </div>
+          </a>
         </article>
       ))}
     </div>
@@ -136,6 +141,7 @@ export const ProjectSection = ({ project }) => (
           </div>
         )}
         <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
+        {project.links && <MediaRenderer media={project.links} title={`${project.title} links`} />}
       </div>
       <aside className="space-y-8 lg:border-l lg:border-neutral-200 lg:pl-8">
         <LoopGallery loops={project.loops} />

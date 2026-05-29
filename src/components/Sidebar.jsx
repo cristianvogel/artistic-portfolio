@@ -34,7 +34,7 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
         <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-6">Selected Supporting Works</p>
         <div className="space-y-8">
           {(() => {
-            const CATEGORY_ORDER = ['Major Works', 'Realtime', 'Composition', 'Interdisciplinary'];
+            const CATEGORY_ORDER = ['Audio Visual', 'Practice Based Research', 'Realtime', 'Composition', 'Interdisciplinary', 'Selected Composition for Dance'];
             
             // Sort projects reverse-chronologically first
             const sortedProjects = [...projects].sort((a, b) => {
@@ -44,7 +44,8 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
             });
 
             return CATEGORY_ORDER.map(category => {
-              const categoryProjects = sortedProjects.filter(p => p.category === category);
+              const sourceProjects = category === 'Audio Visual' ? projects : sortedProjects;
+              const categoryProjects = sourceProjects.filter(p => p.category === category);
               if (categoryProjects.length === 0) return null;
 
               return (

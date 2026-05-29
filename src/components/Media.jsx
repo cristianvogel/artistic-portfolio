@@ -7,7 +7,7 @@ const getYouTubeId = url => {
   return match?.[1] ?? url;
 };
 
-const getYouTubeEmbedUrl = id => {
+const getYouTubeEmbedUrl = ({ id, startSeconds }) => {
   const params = new URLSearchParams({
     autoplay: '1',
     controls: '1',
@@ -17,10 +17,14 @@ const getYouTubeEmbedUrl = id => {
     rel: '0'
   });
 
+  if (startSeconds) {
+    params.set('start', String(startSeconds));
+  }
+
   return `https://www.youtube-nocookie.com/embed/${id}?${params.toString()}`;
 };
 
-const getVimeoEmbedUrl = ({ id, hash }) => {
+const getVimeoEmbedUrl = ({ id, hash, startSeconds }) => {
   const params = new URLSearchParams({
     autoplay: '1',
     badge: '0',
@@ -34,7 +38,9 @@ const getVimeoEmbedUrl = ({ id, hash }) => {
     params.set('h', hash);
   }
 
-  return `https://player.vimeo.com/video/${id}?${params.toString()}`;
+  const startHash = startSeconds ? `#t=${startSeconds}s` : '';
+
+  return `https://player.vimeo.com/video/${id}?${params.toString()}${startHash}`;
 };
 
 export const MinimalAudioPlayer = ({ url, caption }) => {
@@ -60,7 +66,7 @@ export const MinimalAudioPlayer = ({ url, caption }) => {
   };
 
   return (
-    <div className="border border-neutral-300 p-4 flex flex-col gap-4 bg-white/50">
+    <div className="border border-neutral-700 bg-neutral-950 p-4 text-neutral-200 flex flex-col gap-4">
       <audio
         ref={audioRef}
         src={url}
@@ -70,19 +76,19 @@ export const MinimalAudioPlayer = ({ url, caption }) => {
       <div className="flex items-center gap-4">
         <button
           onClick={togglePlay}
-          className="w-10 h-10 flex items-center justify-center border border-neutral-800 hover:bg-neutral-800 hover:text-white transition-colors focus:outline-none"
+          className="w-10 h-10 flex items-center justify-center border border-neutral-500 text-neutral-200 hover:bg-neutral-200 hover:text-neutral-950 transition-colors focus:outline-none"
         >
           {isPlaying ? <Pause size={18} /> : <Play size={18} className="ml-1" />}
         </button>
-        <div className="flex-grow h-[2px] bg-neutral-200 relative">
+        <div className="flex-grow h-[2px] bg-neutral-800 relative">
           <div
-            className="absolute top-0 left-0 h-full bg-neutral-800 transition-all duration-100 ease-linear"
+            className="absolute top-0 left-0 h-full bg-neutral-300 transition-all duration-100 ease-linear"
             style={{ width: `${progress}%` }}
           />
         </div>
         <Volume2 size={16} className="text-neutral-400" />
       </div>
-      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider"><FormattedText text={caption} /></p>}
+      {caption && <p className="text-xs font-mono text-neutral-400 uppercase tracking-wider"><FormattedText text={caption} /></p>}
     </div>
   );
 };
@@ -96,9 +102,9 @@ export const MinimalVideoPlayer = ({ url, caption }) => (
   </div>
 );
 
-export const YouTubeEmbed = ({ url, caption }) => {
+export const YouTubeEmbed = ({ media }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const videoId = getYouTubeId(url);
+  const videoId = getYouTubeId(media.url);
   const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
@@ -107,8 +113,8 @@ export const YouTubeEmbed = ({ url, caption }) => {
         {isLoaded ? (
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src={getYouTubeEmbedUrl(videoId)}
-            title={caption || 'YouTube video player'}
+            src={getYouTubeEmbedUrl({ id: videoId, startSeconds: media.startSeconds })}
+            title={media.caption || 'YouTube video player'}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -119,7 +125,7 @@ export const YouTubeEmbed = ({ url, caption }) => {
             type="button"
             onClick={() => setIsLoaded(true)}
             className="group absolute inset-0 flex items-center justify-center overflow-hidden bg-neutral-950 focus:outline-none"
-            aria-label={`Play ${caption || 'video'}`}
+            aria-label={`Play ${media.caption || 'video'}`}
           >
             <img
               src={thumbnailUrl}
@@ -133,7 +139,7 @@ export const YouTubeEmbed = ({ url, caption }) => {
           </button>
         )}
       </div>
-      {caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={caption} /></p>}
+      {media.caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={media.caption} /></p>}
     </div>
   );
 };
@@ -208,9 +214,33 @@ export const BandcampEmbed = ({ media }) => {
   );
 };
 
+export const SoundCloudEmbed = ({ media }) => {
+  const params = new URLSearchParams({
+    visual: 'true',
+    url: media.trackUrl,
+    show_artwork: 'true'
+  });
+
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="overflow-hidden border border-neutral-300 bg-white">
+        <iframe
+          className="block h-[400px] w-full"
+          src={`https://w.soundcloud.com/player/?${params.toString()}`}
+          title={media.caption || 'SoundCloud audio player'}
+          scrolling="no"
+          frameBorder="no"
+          allow="autoplay"
+        />
+      </div>
+      {media.caption && <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2"><FormattedText text={media.caption} /></p>}
+    </div>
+  );
+};
+
 export const MultiWorkGrid = ({ works, caption }) => (
   <div className="flex flex-col gap-6">
-    <div className="grid grid-cols-1 gap-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {works.map((work, idx) => (
         <a
           key={idx}
@@ -220,16 +250,16 @@ export const MultiWorkGrid = ({ works, caption }) => (
           className="group flex flex-col gap-3 block"
         >
           <div
-            className="relative aspect-square overflow-hidden rounded-[22px] bg-neutral-100 p-1 ring-1 ring-black/[0.06]"
+            className="relative aspect-video overflow-hidden rounded-[10px] bg-neutral-100 p-1 ring-1 ring-black/[0.06]"
             data-meta-date={work.metaIso}
             data-meta-created={work.metaCreated}
           >
             <img
               src={work.image}
               alt={work.title}
-              className="h-full w-full rounded-[18px] object-cover grayscale transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.035] group-hover:grayscale-0"
+              className="h-full w-full rounded-[6px] object-cover grayscale transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.035] group-hover:grayscale-0"
             />
-            <div className="absolute inset-1 flex items-center justify-center rounded-[18px] bg-black/10 opacity-0 transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:opacity-100">
+            <div className="absolute inset-1 flex items-center justify-center rounded-[6px] bg-black/10 opacity-0 transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:opacity-100">
               <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center transform scale-75 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-100 shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
                 <Play size={20} className="ml-1" />
               </div>
@@ -258,6 +288,28 @@ export const MultiWorkGrid = ({ works, caption }) => (
   </div>
 );
 
+export const LinkCard = ({ media }) => (
+  <a
+    href={media.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group block border border-neutral-300 bg-neutral-950 p-6 text-neutral-100 transition-colors hover:bg-neutral-900"
+  >
+    <div className="flex items-start justify-between gap-6">
+      <div>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-neutral-400">{media.label}</p>
+        <h3 className="mt-4 max-w-2xl text-2xl font-light tracking-tight text-neutral-50">{media.title}</h3>
+        {media.caption && (
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-300">
+            <FormattedText text={media.caption} />
+          </p>
+        )}
+      </div>
+      <ExternalLink size={18} className="mt-1 shrink-0 text-neutral-400 transition-colors group-hover:text-neutral-50" />
+    </div>
+  </a>
+);
+
 export const MediaRenderer = ({ media, title }) => {
   if (media.type === 'audio') {
     return <MinimalAudioPlayer url={media.url} caption={media.caption} />;
@@ -268,7 +320,7 @@ export const MediaRenderer = ({ media, title }) => {
   }
 
   if (media.type === 'youtube') {
-    return <YouTubeEmbed url={media.url} caption={media.caption} />;
+    return <YouTubeEmbed media={media} />;
   }
 
   if (media.type === 'vimeo') {
@@ -279,8 +331,16 @@ export const MediaRenderer = ({ media, title }) => {
     return <BandcampEmbed media={media} />;
   }
 
+  if (media.type === 'soundcloud') {
+    return <SoundCloudEmbed media={media} />;
+  }
+
   if (media.type === 'multi-work') {
     return <MultiWorkGrid works={media.works} caption={media.caption} />;
+  }
+
+  if (media.type === 'link') {
+    return <LinkCard media={media} />;
   }
 
   if (media.type === 'image') {
