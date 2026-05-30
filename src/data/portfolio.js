@@ -214,13 +214,13 @@ export const PROJECTS = [
     category: "Selected Composition for Dance",
     type: "Realtime Generative Dance Score",
     focusTags: ["Realtime Score", "Generative Music", "G2 Modular", "MIDI Control", "Choreographic Modulation"],
-    description: "Composition for dance, focused here on the onstage realtime music generator I designed, built and programmed for the production. Nicknamed 'Angus', the score consisted of realtime modular synthesis, and controlled from onstage a custom interface, a vintage radio as a built in  MIDI-controlled G2 Modular engine and a processed vinyl turntable. Rather than functioning as playback, the system generated the entire score through realtime patches, with a small number of choreographically integrated parametric modulation points that let the musical system lock into the stage action.",
+    description: "Composition for dance, focused here on the onstage realtime music generator I designed, built and programmed for the production. Nicknamed 'Angus', the score consisted of realtime modular synthesis, and controlled from onstage a custom interface, a vintage radio as a built in  MIDI-controlled G2 Modular engine and a processed vinyl turntable. Rather than functioning as playback, the system generated the entire score through realtime patches, with a small number of choreographically integrated parametric modulation points that let the musical system lock into the stage action.\n \n The link is an WayBackMachinie archival page snapshotted from no-future.com bulletin board that I maintained in the 00s",
     chronology: {
       primary: "03 Mar 2005",
       year: "2005",
       label: "Website",
       iso: "2005-03-03",
-      source: "https://www.gillesjobin.com/en/creation-en/steak-house/"
+      source: "https://web.archive.org/web/20051027214003/http://no-future.com/angus_microsite/index.html"
     },
     media: {
       type: "none",

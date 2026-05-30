@@ -300,7 +300,7 @@ export const LinkCard = ({ media }) => (
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-neutral-400">{media.label}</p>
         <h3 className="mt-4 max-w-2xl text-2xl font-light tracking-tight text-neutral-50">{media.title}</h3>
         {media.caption && (
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-300">
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-100">
             <FormattedText text={media.caption} />
           </p>
         )}

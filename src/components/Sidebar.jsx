@@ -50,7 +50,7 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
 
               return (
                 <div key={category} className="space-y-4">
-                  <h3 className="text-[10px] font-mono uppercase tracking-widest text-neutral-300 border-l border-neutral-200 pl-4 ml-1">
+                  <h3 className="text-[10px] font-mono uppercase tracking-widest text-neutral-100 border-l border-neutral-200 pl-4 ml-1">
                     {category}
                   </h3>
                   <ul className="space-y-3">
@@ -63,7 +63,7 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
                           >
                             <span className="truncate">{project.title}</span>
                             {project.chronology && (
-                              <time dateTime={project.chronology.iso} className="ml-auto text-[10px] font-mono uppercase tracking-[0.16em] opacity-45">
+                              <time dateTime={project.chronology.iso} className="ml-auto text-[10px] font-mono uppercase tracking-[0.16em] opacity-85">
                                 {project.chronology.year}
                               </time>
                             )}

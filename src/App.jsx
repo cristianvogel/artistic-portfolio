@@ -6,9 +6,15 @@ import { AbstractSection, CollaboratorsSection, ProjectSection, WritingSection }
 export default function App() {
   const [activeView, setActiveView] = useState('abstract');
   const mainContentRef = useRef(null);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 1024; // Tailwind's lg breakpoint
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
 
     if (isMobile) {
       // On mobile, scroll to the main content area after a selection.
