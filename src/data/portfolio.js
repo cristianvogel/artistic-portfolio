@@ -11,13 +11,13 @@ export const ABSTRACT_DATA = {
 export const PROJECTS = [
   {
     id: "p1",
-    title: "Acousmatic Video Art",
+    title: "Acousmatic Music Comedy",
     year: "2016",
     category: "Interdisciplinary",
     type: "Generative Performance",
     duration: "09:19",
     focusTags: ["Action Score", "Generative Combinatorics", "Acousmatic", "Symbolic", "Shortwave Sounds"],
-    description: "Video artwork exploring action score and critical theory representation./n/n" + "Driven by acousmatic drift, stray radio waves, and slow-motion recordings, a tautological music machine simulates activity to an empty room. The human operator gets hungry, abandons the frame for a late-night grill house, and leaves the apparatus behind, fully capable of churning away its own existence without him.",
+    description: "Artwork exploring action score and acousmatic composition./n/n" + "Driven by Baudrillardian utterings, biological clock, stray radio waves, and slow-motion phone recordings, a tautological music machine simulates activity to an empty room. The human operator gets hungry, abandons the frame for a late-night grill house, and leaves the apparatus behind, fully capable of churning away its own existence without him.",
     chronology: {
       primary: "14 Aug 2016",
       year: "2016",
@@ -84,7 +84,7 @@ export const PROJECTS = [
     type: "Electroacoustic Remix",
     duration: "05:33",
     focusTags: ["Electroacoustic", "Remix", "Signal Feedback", "Network Delay", "Codec Filtering"],
-    description: "A remix composed from source material by Danish electronic music pioneer Else Marie Pade, commissioned for a DaCapo tribute CD. The work treats Pade's 1961 Etude as an early investigation into audio signal feedback, likely made with tape machines and filtering in the feedback path. Vogel translated that idea into a contemporary networked process: sounds from Pade's original were streamed from a Copenhagen studio computer, received on a phone after travelling through the web, then routed back into the mixer. The web's natural latency became the primary delay time, while compression codecs introduced a present-day form of subtractive filtering. The final composition includes the artefacts and timing instabilities of that process.",
+    description: "A remix composed from source material by Danish electronic music pioneer Else Marie Pade, commissioned for a tribute CD. The work treats Pade's 1961 Etude as an early investigation into audio signal feedback, likely made with tape machines and filtering in the feedback path. Vogel translated that idea into a contemporary networked process: sounds from Pade's original were streamed from a Copenhagen studio computer, received on a phone after travelling through the web, then routed back into the mixer. The web's natural latency became the primary delay time, while compression codecs introduced a present-day form of subtractive filtering. The final composition includes the artefacts and timing instabilities of that process.",
     chronology: {
       primary: "09 Mar 2017",
       year: "2017",
@@ -444,18 +444,7 @@ export const PROJECTS = [
       source: "https://www.heardingcatscollective.com/cristian-vogel"
     },
     media: {
-      type: "multi-work",
-      works: [
-        {
-          title: "HEARding Cats Collective page",
-          url: "https://www.heardingcatscollective.com/cristian-vogel",
-          date: "2020",
-          metaLabel: "external reference",
-          metaIso: "2020",
-          image: "/other-stills/ingloriousImages.webp"
-        }
-      ],
-      caption: "Open the HEARding Cats Collective page for event and artist context."
+      type: "motion-excerpts"
     },
     loops: [
       {
@@ -510,7 +499,7 @@ export const PROJECTS = [
     category: "Interdisciplinary",
     type: "Locative Media / Spatial Sound",
     focusTags: ["Locative Audio", "Public Space", "GPS Tracking"],
-    description: "A number of geo-located audio works designed to be experienced by listeners moving through specific physical environments. The Age of Wire and String exists on Echoes as a geolocated podwalk, but because that centralised platform is paywalled, this portfolio foregrounds a listenable special version made for broadcast on Kiosk Radio, Brussels, as part of Outsiders: Endless Process.",
+    description: "A number of geo-located audio works designed to be experienced by listeners moving through specific routes with headphones with streaming audio. The Age of Wire and String, Becoming Bird and others were authored on Echoes as geolocated podwalks, but because that centralised platform is paywalled, this portfolio foregrounds a listenable special version made for broadcast on Kiosk Radio, Brussels, as part of Outsiders: Endless Process.",
     chronology: {
       primary: "02 Oct - 17 Nov 2021",
       year: "2021",
@@ -724,59 +713,6 @@ export const THESIS_TAGS_BY_PROJECT = {
         "dance score",
         "computation and choreography"
     ]
-};
-
-export const YOUTUBE_INFO_BY_PROJECT = {
-  p1: {
-    label: "more info",
-    publishedDescription: [
-      "Tying helium party balloons to motorised studio faders for no particular reason. The party is over, the social is collapsing, and the debris of a particularly indulgent picnic lies all over the place. Is there more fun to be had, or is it time to step outside?",
-      "Driven by acousmatic drift, stray radio waves, and slow-motion recordings, a tautological music machine simulates activity to an empty room. The human operator gets hungry, abandons the frame for a late-night grill house, and leaves the apparatus behind, fully capable of churning away its own existence without him.",
-      "Mechanical redundancy with a large helping of basic exhaustion."
-    ],
-    metadata: {
-      title: "\"What are you doing after the Orgy?\" (after Jean Baudrillard)",
-      channel: "Cristián Vogel",
-      category: "Comedy",
-      uploaded: "14 Aug 2016",
-      duration: "09:19",
-      views: "20",
-      comments: "archive",
-      source: "https://www.youtube.com/watch?v=g25OYPpf1kg"
-    }
-  },
-  p2: {
-    label: "more info",
-    publishedDescription: [
-      "The fifth part of a trilogy: a rare short film by Stefan Bruggemann."
-    ],
-    metadata: {
-      title: "A PRODUCTION OF NOTHING",
-      channel: "monkeyartbcn",
-      category: "Film & Animation",
-      uploaded: "19 Feb 2007",
-      duration: "04:51",
-      views: "2,265",
-      comments: "archive",
-      source: "https://www.youtube.com/watch?v=eLegrc_mdnI"
-    }
-  },
-  p3: {
-    label: "more info",
-    publishedDescription: [
-      "No YouTube description was available from the public watch metadata for this upload."
-    ],
-    metadata: {
-      title: "Cristian Vogel live @ BrokenSonics2020, further_in 28/06/20",
-      channel: "further_in",
-      category: "People & Blogs",
-      uploaded: "04 Jul 2020",
-      duration: "21:58",
-      views: "241",
-      comments: "archive",
-      source: "https://www.youtube.com/watch?v=tYQxM1MP6AI"
-    }
-  }
 };
 
 export const WRITINGS = [

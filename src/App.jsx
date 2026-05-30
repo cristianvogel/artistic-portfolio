@@ -1,13 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Sidebar } from './components/Sidebar.jsx';
-import { ABSTRACT_DATA, COLLABORATORS, PROJECTS, THESIS_TAGS_BY_PROJECT, WRITINGS, YOUTUBE_INFO_BY_PROJECT } from './data/portfolio.js';
+import { ABSTRACT_DATA, COLLABORATORS, PROJECTS, THESIS_TAGS_BY_PROJECT, WRITINGS } from './data/portfolio.js';
 import { AbstractSection, CollaboratorsSection, ProjectSection, WritingSection } from './views/Sections.jsx';
 
 export default function App() {
   const [activeView, setActiveView] = useState('abstract');
+  const mainContentRef = useRef(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const isMobile = window.innerWidth < 1024; // Tailwind's lg breakpoint
+
+    if (isMobile) {
+      // On mobile, scroll to the main content area after a selection.
+      // A small timeout can help ensure rendering is in progress.
+      setTimeout(() => {
+        mainContentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      // On desktop, scroll to the top of the window.
+      window.scrollTo(0, 0);
+    }
   }, [activeView]);
 
   const activeProject = PROJECTS.find(project => project.id === activeView);
@@ -30,8 +42,7 @@ export default function App() {
         <ProjectSection
           project={{
             ...activeProject,
-            thesisTags: THESIS_TAGS_BY_PROJECT[activeProject.id],
-            youtubeInfo: YOUTUBE_INFO_BY_PROJECT[activeProject.id]
+            thesisTags: THESIS_TAGS_BY_PROJECT[activeProject.id]
           }}
         />
       );
@@ -49,7 +60,7 @@ export default function App() {
         onSelectView={setActiveView}
       />
 
-      <main className="w-full lg:pl-[380px] xl:pl-[420px] min-h-screen">
+      <main ref={mainContentRef} className="w-full lg:pl-[380px] xl:pl-[420px] min-h-screen">
         <div className="p-6 py-10 md:p-10 lg:p-16 xl:p-20 max-w-[1280px] mx-auto">
           {renderContent()}
         </div>

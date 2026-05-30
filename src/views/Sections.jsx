@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, ArrowUp } from 'lucide-react';
 import { LoopGallery } from '../components/LoopGallery.jsx';
 import { MediaRenderer } from '../components/Media.jsx';
 import { ThesisTagGrid } from '../components/ThesisTagGrid.jsx';
@@ -76,6 +76,30 @@ export const CollaboratorsSection = ({ collaborators }) => (
   </div>
 );
 
+const ReturnToTopButton = () => {
+  const scrollToTop = () => {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      const sidebar = document.querySelector('aside');
+      sidebar?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="mt-16 text-center">
+      <button
+        onClick={scrollToTop}
+        className="group inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-500 transition-colors hover:text-neutral-900"
+      >
+        <ArrowUp size={12} className="transition-transform group-hover:-translate-y-0.5" />
+        Return to Top
+      </button>
+    </div>
+  );
+};
+
 export const ProjectSection = ({ project }) => (
   <div className="animate-in fade-in duration-500 max-w-[1120px]">
     <header className="border-b border-neutral-200 pb-8">
@@ -84,7 +108,9 @@ export const ProjectSection = ({ project }) => (
 
     <div id="project-media" className="py-8 md:py-10">
       <div className="w-full">
-        <MediaRenderer media={project.media} title={project.title} />
+        {project.media?.type === 'motion-excerpts'
+          ? <LoopGallery loops={project.loops} />
+          : <MediaRenderer media={project.media} title={project.title} />}
         {project.duration && (
           <dl className="mt-4 border-t border-neutral-200 pt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 md:max-w-sm md:ml-auto">
             <div className="flex items-baseline justify-between gap-4">
@@ -138,12 +164,15 @@ export const ProjectSection = ({ project }) => (
             </div>
           </div>
         )}
-        <ThesisTagGrid tags={project.thesisTags} youtubeInfo={project.youtubeInfo} />
+        <ThesisTagGrid tags={project.thesisTags} />
         {project.links && <MediaRenderer media={project.links} title={`${project.title} links`} />}
       </div>
       <aside className="space-y-8 lg:border-l lg:border-neutral-200 lg:pl-8">
+        {project.media?.type !== 'motion-excerpts' && (
         <LoopGallery loops={project.loops} />
+        )}
       </aside>
     </div>
+    <ReturnToTopButton />
   </div>
 );
