@@ -238,6 +238,30 @@ export const SoundCloudEmbed = ({ media }) => {
   );
 };
 
+export const ArchivalIframe = ({ media }) => {
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="relative group overflow-hidden border border-neutral-300 bg-neutral-900 aspect-[4/3] w-full">
+        <iframe
+          src={media.url}
+          className="w-full h-full border-0"
+          title={media.title || "Archival Page"}
+        />
+        {/* Vignette Mask */}
+        <div 
+          className="pointer-events-none absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.6)] transition-opacity duration-700 group-hover:opacity-40" 
+          aria-hidden="true"
+        />
+      </div>
+      {media.caption && (
+        <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider pt-2">
+          <FormattedText text={media.caption} />
+        </p>
+      )}
+    </div>
+  );
+};
+
 export const MultiWorkGrid = ({ works, caption }) => (
   <div className="flex flex-col gap-6">
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -321,6 +345,10 @@ export const MediaRenderer = ({ media, title }) => {
 
   if (media.type === 'youtube') {
     return <YouTubeEmbed media={media} />;
+  }
+
+  if (media.type === 'archival_iframe') {
+    return <ArchivalIframe media={media} />;
   }
 
   if (media.type === 'vimeo') {

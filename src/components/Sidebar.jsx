@@ -36,8 +36,10 @@ export const Sidebar = ({ abstractData, activeView, projects, onSelectView }) =>
           {(() => {
             const CATEGORY_ORDER = ['Audio Visual', 'Composition', 'Realtime', 'Practice Based Research', 'Interdisciplinary', 'Selected Composition for Dance'];
             
-            // Sort projects reverse-chronologically first
+            // Sort projects reverse-chronologically; sidebarPriority flag overrides date rule for individual entries
             const sortedProjects = [...projects].sort((a, b) => {
+              if (a.sidebarPriority && !b.sidebarPriority) return -1;
+              if (b.sidebarPriority && !a.sidebarPriority) return 1;
               const dateA = a.chronology?.iso || a.year || "";
               const dateB = b.chronology?.iso || b.year || "";
               return dateB.localeCompare(dateA);

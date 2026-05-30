@@ -211,6 +211,7 @@ export const PROJECTS = [
     id: "p11",
     title: "Steak House",
     year: "2005",
+    sidebarPriority: true, // pinned to top of category; date rule intentionally broken for this entry
     category: "Selected Composition for Dance",
     type: "Realtime Generative Dance Score",
     focusTags: ["Realtime Score", "Generative Music", "G2 Modular", "MIDI Control", "Choreographic Modulation"],
@@ -223,8 +224,9 @@ export const PROJECTS = [
       source: "https://web.archive.org/web/20051027214003/http://no-future.com/angus_microsite/index.html"
     },
     media: {
-      type: "none",
-      caption: "Steak House production image / Cie Gilles Jobin"
+      type: "archival_iframe",
+      url: "/archive/angus_microsite/index.html",
+      caption: "Steak House / Archival Microsite for 'Angus' (2005)"
     }
   },
   {

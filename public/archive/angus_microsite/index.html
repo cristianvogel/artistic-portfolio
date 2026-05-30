@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ANGUS V1.0 - CREATION FOR GILLES JOBIN 'STEAK HOUSE' 2005</title>
+<style>
+  body {
+    background-image: url('images/originalBackdrop.jpg');
+    background-color: #a9a9a9;
+    color: #000011;
+    margin: 0;
+    padding: 0;
+  }
+  a { color: white; }
+  a:visited { color: #dcdcdc; }
+  a:active { color: #7fffd4; }
+  .thumb {
+    cursor: pointer;
+    border: 0;
+    display: block;
+  }
+  .thumb:hover { opacity: 0.8; }
+</style>
+</head>
+<body>
+  <div align="center">
+    <br><br>
+    <table width="1004" border="0" cellspacing="2" cellpadding="1">
+      <tr>
+        <td width="386">
+          <img src="images/angustitle.gif" alt="Angus V1.0" border="0">
+        </td>
+        <td>
+          <table width="600" border="0" cellspacing="2" cellpadding="1">
+            <tr><td width="150"><div align="right"></div></td></tr>
+          </table>
+        </td>
+        <td></td>
+      </tr>
+      <tr height="1">
+        <td width="386" height="1"></td>
+        <td height="1"></td>
+        <td height="1"></td>
+      </tr>
+      <tr>
+        <td width="386">
+          <div align="left">
+            <br>
+            <table width="374" border="0" cellspacing="2" cellpadding="0">
+              <tr>
+                <td>
+                  <img src="thumbs/angusV1.jpg" alt="Angus in the light"
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/1.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    'Angus V1.0', a realtime digital instrument conceived as a means of creating
+                    a live interactive music score for Gilles Jobin's new dance piece, 'Steak House'.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/SiemensBox1.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/2.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    Built into a 50's Siemens Tube radio, it had to be stripped and gutted —
+                    Simon did this in Geneva in a freezing cold workshop, whilst we listened to punk.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/siemens50spre-PCB.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/3.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    This is what circuits looked like before the invention of the printed circuit board.
+                    We kept the original bakelite switches, which Simon managed to wire into the modern
+                    digital controller circuits.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/InsideHackedController.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/4.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    A hacked Kenton 'control freak' provides a quickly programmable and reliable
+                    controller circuit for the custom switches and pots. The knobs I sourced on eBay
+                    in Canada — they were recovered from a 60s broadcast desk.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/insideAngus.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/5.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    The G2 Modular DSP engine and the Kenton controller circuit inside Angus.
+                    Everything is bolted into the case and the original frame.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/angusTurntableView.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/6.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    Under the lid, a Vestax portable turntable, which is routed directly into the G2 engine.
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="thumbs/Me&amp;AngusHangingOut.jpg" alt=""
+                       class="thumb" height="50" width="50"
+                       onclick="showMain('images/7.jpg')">
+                </td>
+                <td>
+                  <font face="Verdana" size="1">
+                    First, a pose with Angus, and now to program the beast.
+                    Many thanks again to Simon Jobin for doing all the soldering and mounting.
+                  </font>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            <img src="images/1.jpg" alt="" id="mainpic01" align="top" border="0">
+          </div>
+        </td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function showMain(src) {
+      document.getElementById('mainpic01').src = src;
+    }
+  </script>
+</body>
+</html>
