@@ -173,6 +173,13 @@ export const ProjectSection = ({ project }) => (
         )}
       </aside>
     </div>
+    {project.bottomMedia && (
+      <div className="mt-12 border-t border-neutral-200 pt-12">
+        <div className="max-w-[960px]">
+          <MediaRenderer media={project.bottomMedia} title={`${project.title} full performance`} />
+        </div>
+      </div>
+    )}
     <ReturnToTopButton />
   </div>
 );
