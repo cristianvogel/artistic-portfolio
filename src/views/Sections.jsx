@@ -164,7 +164,7 @@ export const ProjectSection = ({ project }) => (
             </div>
           </div>
         )}
-        <ThesisTagGrid tags={project.thesisTags} />
+        {!project.thesisTagsAfterMedia && <ThesisTagGrid tags={project.thesisTags} />}
         {project.links && <MediaRenderer media={project.links} title={`${project.title} links`} />}
       </div>
       <aside className="space-y-8 lg:border-l lg:border-neutral-200 lg:pl-8">
@@ -180,6 +180,7 @@ export const ProjectSection = ({ project }) => (
         </div>
       </div>
     )}
+    {project.thesisTagsAfterMedia && <ThesisTagGrid tags={project.thesisTags} />}
     <ReturnToTopButton />
   </div>
 );

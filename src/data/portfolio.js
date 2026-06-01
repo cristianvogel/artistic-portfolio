@@ -35,6 +35,14 @@ export const PROJECTS = [
                 date: "Feb 2020",
                 text: "Adapted as a live concert performance for Strom Festival at the Berliner Philharmonie.",
                 source: "https://groove.de/2020/02/21/strom-festival-wer-nicht-wagt-der-nicht-gewinnt/"
+            },
+            {
+                label: "KLANG Festival 2018",
+                venue: "DFI Cinemateket",
+                location: "Copenhagen",
+                date: "May 2018",
+                text: "Screened in 7.1 surround at Danish Film Institute cinema as part of Klang Avantgarde Music Festival",
+                source: "https://web.archive.org/web/20180828233032/http://klang.dk/2018/program/film-agnete-og-havmanden"
             }
         ],
         chronology: {
@@ -55,6 +63,7 @@ export const PROJECTS = [
             id: "708497704",
             caption: "Documentary about the staging of Agnete & The Merman / vimeo"
         },
+        thesisTagsAfterMedia: true,
         loops: [
             {
                 src: "/generated-loops/agnete-merman/loop-01.mp4",
